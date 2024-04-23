@@ -345,3 +345,9 @@ canvas{
      height: 550px;
   }
 }
+
+#sWorks{
+  background-image: url(../assets/img/work-banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
