@@ -1,8 +1,10 @@
-const dir = ['home', 'templates', 'blogs'];
+const dir = ['home', 'templates', 'blogs', 'services'];
 let url = null;
 let assets_path = 'assets/img/logo.png';
 let temp_path = 'templates/about-us.html';
 let index_path = './index.html';
+let blog_path = './templates/blogs/blog-list.html';
+let contact_path = './templates/contact-us.html';
 dir.forEach(element => {
     if (location.pathname.includes(element)) {
         url = element;
@@ -14,16 +16,23 @@ switch(url) {
     assets_path = '../assets/img/logo.png';
     temp_path = '../templates/about-us.html';
     index_path = '../index.html';
+    blog_path = '../templates/blogs/blog-list.html';
+    contact_path = '../templates/contact-us.html';
     break;
   case 'blogs':
+  case 'services':
     assets_path = '../../assets/img/logo.png';
     temp_path = '../../templates/about-us.html';
     index_path = '../../index.html';
+    blog_path = '../../templates/blogs/blog-list.html';
+    contact_path = '../../templates/contact-us.html';
     break;
   default:
     assets_path = 'assets/img/logo.png';
     temp_path = 'templates/about-us.html';
     index_path = './index.html';
+    blog_path = './templates/blogs/blog-list.html';
+    contact_path = './templates/contact-us.html';
 }
 
 const headerContent = `
@@ -38,7 +47,7 @@ const headerContent = `
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" title="Home" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" title="Home" href="${index_path}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" title="About Us" href="${temp_path}">About Us</a>
@@ -55,13 +64,13 @@ const headerContent = `
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" title="Blogs" href="#">Blog</a>
+                    <a class="nav-link" title="Blogs" href="${blog_path}">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" title="Contact Us" href="#">Contact</a>
+                    <a class="nav-link" title="Contact Us" href="${contact_path}">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" title="Store" href="#">MapleHeap Store</a>
+                    <a class="nav-link" title="Store" href="https://store.mapleheapservice.com/web/login.do" target="_blank">MapleHeap Store</a>
                 </li>
             </ul>
         </div>

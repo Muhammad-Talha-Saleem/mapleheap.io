@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>How data is secured in StarMH platform | MapleHeap Technologies</title>
+    <link rel="icon" href="../../assets/img/icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link href="../../libs/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="../../libs/fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="../../libs/fontawesome/css/solid.css" rel="stylesheet" />
+
+    <!-- custom style  -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+  </head>
+  <body>
+
+    <!-- header -->
+    <header id="_header" class="bg-light shadow"></header>
+
+    <section>
+    	<div class="p-lg-0 mt-5">
+        <div class="row w-100 m-0">
+          <div class="col-lg-6 offset-lg-3 text-center">
+            <h1 class="font-weight-bold">How data is secured in StarMH platform</h1>
+            <p>This blog discusses how each module of StarMH platform ensures data security</p>
+            <p class="mb-2 text-primary">Atif Baig</p>
+            <span>1/15/2024 - 1 min read</span>
+            <div class="">
+              <img src="../../assets/img/blog/blog3.avif" class="w-75">
+            </div>
+          </div>
+
+          <div class="col-lg-8 offset-lg-2 h6 mt-5">
+            <p>For best security, most of the StarMH modules/components are deployed on client's internal servers and so client's reporting data never reaches our servers at any point. This approach gives a great peace of mind to our clients from data security standpoint.</p>
+
+            <div class="mt-5">
+              <div class="step1 mb-5">
+                <span>
+                  <p class="mb-3"><b>StarMH Designer: </b> This is deployed on MapleHeap server within our secure VPN and can be accessed over the internet. The reason for this deployment type is that our clients never have to share any private/confidential data while using this designer tool.</p>
+
+                  <p class="mb-3"><b>StarMH Admin: </b> This is deployed on the client's internal server to ensure best security for the private/confidential data. Ideally this should not be accessible outside of the client's VPN. The reason for this recommendation is that the admin application can be used to update production data inside the reporting database. It can also be used to add new StarMH reporting tables.</p>
+
+                  <p class="mb-3"><b>StarMH AI Module: </b> StarMH AI module comprises of two components. One is StarMH deep learning API and the other one is a background process than performs daily AI model training and stores the predictions in the reporting database. Both of these components are set up on client's local servers which make them completely secure.</p>
+
+                  <p class="mb-3"><b>StarMH Session Manager: </b> This is deployed on the client's internal server to ensure best security for the private/confidential data. Ideally this should not be accessible outside of the client's VPN as this can be used to create new StarMH dashboard sessions which should never be allowed for any application running outside the client's VPN.</p>
+
+                  <p class="mb-3"><b>StarMH Dashboard: </b> It is deployed on the client's internal server. This is the only module that might need to be accessible over internet. However, to ensure security it can only be accessed with a valid StarMH session which is created using StarMH session manager that runs in client's local environment and not accessible over internet.</p>
+
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+    <footer id="_footer"></footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../../js/jquery-3.4.1.slim.min.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../assets/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+    <script type="text/javascript" src="../../js/footer.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+  </body>
+</html>
