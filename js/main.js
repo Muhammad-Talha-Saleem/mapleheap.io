@@ -105,8 +105,8 @@
     function styleCanvas() {
       canvas.width = element.offsetWidth;
       canvas.height = element.offsetHeight;
-      ctx.fillStyle = options.dotColor;
-      ctx.strokeStyle = options.lineColor;
+      ctx.fillStyle = '#44edde80';
+      ctx.strokeStyle = '#44edde80';
       ctx.lineWidth = options.lineWidth;
     }
 
