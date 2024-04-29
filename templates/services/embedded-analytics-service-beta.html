@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>A step-by-step guide on using StarMH platform | MapleHeap Technologies</title>
+    <title>StarMH: Embedded Analytics Service | MapleHeap Technologies</title>
     <link rel="icon" href="../../assets/img/icon.png">
 
     <!-- Bootstrap CSS -->
@@ -27,15 +27,14 @@
     	<div class="p-lg-0 mt-5">
         <div class="row w-100 m-0">
           <div class="col-lg-6 offset-lg-3 text-center">
-            <h1 class="font-weight-bold">A step-by-step guide on using StarMH platform</h1>
-            <p>This post is a user guide on how different tasks could be performed to build and use a high quality StarMH dashboard in your application</p>
-            <p class="mb-2 text-primary">Atif Baig</p>
-            <span>1/15/2024 - 1 min read</span>
+            <h1 class="font-weight-bold">
+              <img src="../../assets/img/services/s1.avif" alt="Embedded Analytics Service" class="img-fluid">Star<span class="text-warning">MH</span>: Embedded Analytics Service
+            </h1>
             <div class="mt-5">
               <div class="video mt-5" style="height: 70vh;">
                 <div class="row w-100 h-100 m-0">
                   <div class="col-12 h-100">
-                    <iframe src="https://drive.google.com/file/d/1fsk2-9YKAgvo6LQv17e4nDKFWk97ynHK/preview" class="w-100 h-100" allow="autoplay"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1zcET3FHlgP9MD6WBIBJyVforOSOcnkY_/preview" class="border-0 w-100 h-100" allow="autoplay"></iframe>
                   </div>
                 </div>
               </div>
@@ -43,28 +42,94 @@
           </div>
 
           <div class="col-lg-8 offset-lg-2 h6 mt-5">
-            <p>Below are the steps to design, integrate and embed StarMH dashboards.</p>
+            <p>
+              StarMH platform can be used to easily create and embed beautiful time series based data analytics dashboards in your application. We take a systematic approach to make this happen. In the first step, StarMH design application helps you create a *.starmh design file using a UI based tool that requires no coding. After that this design file is uploaded to the StarMH admin application where dashboard designs are linked to the reporting data. The reporting data comes from our centralized reporting database where data can be ingested from heterogeneous sources using our data ingestion API. Last but not the least, there is a separate AI module that does regular model training on the reporting tables whenever AI powered time series data predictions are enabled for one or more sections in StarMH dashboards.
+            </p>
 
-            <div class="mt-5">
-              <div class="step1 mb-5">
-                <span>
-                  <p class="mb-5"><b>Step 1: </b> Generate StarMH dashboard using the UI based designer component available in StarMH designer tool and download *.starmh design file.</p>
-                  <p class="mb-5"><b>Step 2: </b> Upload *.starmh design file in StarMH admin application and configure each dashboard tile to enable dynamic reporting data.</p>
-                  <p class="mb-5"><b>Step 3: </b> Based on the requirements, enable NLP/AI features such as trend analysis, sentiment analysis, keyword extraction, and content recommendation.</p>
-                  <p class="mb-5"><b>Step 4: </b> Embed fully configured StarMH dashboard in your application with the help of StarMH session manager that shares the session information across your application and StarMH dashboard.</p>
-                  <p class="mb-5"><b>Note: </b> If the StarMH dashboard you are creating needs data that is not already there in the existing StarMH tables then you might have to add one or more new StarMH tables and also develop data ingestion processes for each of them. Please refer to the data ingestion blog to get details on how data could be ingested in StarMH tables.</p>
-                </span>
-                <div class="mt-3">
-                  <img src="../../assets/img/blog/blog3-1.avif" alt="Add the desired StarMH table if it does exist already." class="w-100">
+            <div class="">
+              <div class="row w-100 m-0 align-items-center">
+                <div class="col-lg-6 col-sm-12 mt-5 pt-5">
+                  <h3 class="font-weight-bold">Star<span class="text-warning">MH</span> Designer</h3>
+                  <span>
+                    This component is used to design dashboards with zero code. A dashboard can have one or more rows and each row can have one or more sections. A section can hold a graph, table or a custom template. Each of these content types can have dynamic fields that are used to load the target dynamic data in MapleHeap dashboards. The design created by this component can be downloaded as a *.starmh file.
+                  </span>
                 </div>
-              </div>
-
-              <div class="step2 mb-5">
-                <div class="mt-3">
-                  <img src="../../assets/img/blog/blog3-2.avif" alt="Configure the data upload preferences for the table in which data has to be ingested. " class="w-100">
+                <div class="col-lg-5 col-sm-6 offset-lg-1 mt-5 pt-5">
+                  <img src="../../assets/img/services/s2.avif" alt="StarMH Designer" class="w-100 img-fluid">
                 </div>
               </div>
             </div>
+
+            <div class="">
+              <div class="row flex-row-reverse justify-content-between w-100 m-0 align-items-center">
+                <div class="col-lg-6 col-sm-12 mt-5 pt-5">
+                  <h3 class="font-weight-bold">Star<span class="text-warning">MH</span> Admin</h3>
+                  <span>
+                    This component is built for administrative users who take *.starmh file created by the StarMH designer component and add the necessary configuration to link dashboard designs to the actual data. Enabling AI powered time series predictions is as simple as clicking a button inside this admin component.
+                  </span>
+                </div>
+                <div class="col-lg-5 col-sm-6 mt-5 pt-5">
+                  <img src="../../assets/img/services/s3.avif" alt="StarMH Designer" class="w-100 img-fluid">
+                </div>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="row w-100 m-0 align-items-center">
+                <div class="col-lg-6 col-sm-12 mt-5 pt-5">
+                  <h3 class="font-weight-bold">Star<span class="text-warning">MH</span> Data Ingestion API</h3>
+                  <span>
+                    The capability of real-time data ingestion is one of the most important aspects of time series data storage. To achieve high performance and reliability we use QuestDB reporting database for persisting reporting data. You can easily ingest real-time data from multiple sources into this reporting database using our data ingestion API.
+                  </span>
+                </div>
+                <div class="col-lg-5 col-sm-6 offset-lg-1 mt-5 pt-5">
+                  <img src="../../assets/img/services/s4.avif" alt="StarMH Designer" class="w-100 img-fluid">
+                </div>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="row flex-row-reverse justify-content-between w-100 m-0 align-items-center">
+                <div class="col-lg-6 col-sm-12 mt-5 pt-5">
+                  <h3 class="font-weight-bold">Star<span class="text-warning">MH</span> AI Module</h3>
+                  <span>
+                    By default, the data ingested into StarMH reporting database is retrieved for data analytics dashboards with the help of database queries in background. The query might be complex based on whatever conditions are provided via StarMH admin application. With all its complexity, it is yet not AI powered reporting. We have to enable AI settings within individual sections of a StarMH dashboard using StarMH admin application. Once AI is enabled for one or more dashboard sections, StarMH platform begins regular AI model training using the data associated with those dashboard sections. This complex task of AI model training with time series data is performed by StarMH AI module.
+                  </span>
+                </div>
+                <div class="col-lg-5 col-sm-6 mt-5 pt-5">
+                  <img src="../../assets/img/services/s5.avif" alt="StarMH Designer" class="w-100 img-fluid">
+                </div>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="row w-100 m-0 align-items-center">
+                <div class="col-lg-6 col-sm-12 mt-5 pt-5">
+                  <h3 class="font-weight-bold">Star<span class="text-warning">MH</span> Session Manager</h3>
+                  <span>
+                    This component is responsible for creating, updating, retrieving, and deleting the shared sessions. The information stored in these sessions are shared across StarMH embedded dashboards and your application. Once a shared session is created, a unique session id is assigned to it to uniquely identify sessions for each connection between StarMH dashboard and your application
+                  </span>
+                </div>
+                <div class="col-lg-5 col-sm-6 offset-lg-1 mt-5 pt-5">
+                  <img src="../../assets/img/services/s6.avif" alt="StarMH Designer" class="w-100 img-fluid">
+                </div>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="row flex-row-reverse justify-content-between w-100 m-0 align-items-center">
+                <div class="col-lg-6 col-sm-12 mt-5 pt-5">
+                  <h3 class="font-weight-bold">Star<span class="text-warning">MH</span> Embedded Dashboard</h3>
+                  <span>
+                    This component loads the StarMH dashboard inside your application. To do so, it connects to the reporting database and pulls the related data using search parameters, core conditions as well as dashboard settings supplied via StarMH admin application. If AI powered predictions are enabled in a dashboard then data for those predictions come from the results obtained via ML model training with history data. This component identifies each StarMH dashboard by a unique id that can be used to embed the desired dashboards in your application. To be able to dynamically load data based on user's session, you can simply share the session across your application and the StarMH embedded dashboard by creating and using a shared session with the help of StarMH session manager component as discussed above.
+                  </span>
+                </div>
+                <div class="col-lg-5 col-sm-6 mt-5 pt-5">
+                  <img src="../../assets/img/services/s7.avif" alt="StarMH Designer" class="w-100 img-fluid">
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
     	</div>
