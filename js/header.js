@@ -5,6 +5,7 @@ let temp_path = 'templates/about-us.html';
 let index_path = './index.html';
 let blog_path = './templates/blogs/blog-list.html';
 let contact_path = './templates/contact-us.html';
+let services_path = './';
 dir.forEach(element => {
     if (location.pathname.includes(element)) {
         url = element;
@@ -18,6 +19,7 @@ switch(url) {
     index_path = '../index.html';
     blog_path = '../templates/blogs/blog-list.html';
     contact_path = '../templates/contact-us.html';
+    services_path = '../';
     break;
   case 'blogs':
   case 'services':
@@ -26,6 +28,7 @@ switch(url) {
     index_path = '../../index.html';
     blog_path = '../../templates/blogs/blog-list.html';
     contact_path = '../../templates/contact-us.html';
+    services_path = '../../';
     break;
   default:
     assets_path = 'assets/img/logo.png';
@@ -33,6 +36,7 @@ switch(url) {
     index_path = './index.html';
     blog_path = './templates/blogs/blog-list.html';
     contact_path = './templates/contact-us.html';
+    services_path = './';
 }
 
 const headerContent = `
@@ -57,10 +61,10 @@ const headerContent = `
                         Services
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" title="action" href="#">Action</a>
-                        <a class="dropdown-item" title="action" href="#">Another action</a>
+                        <a class="dropdown-item" title="action" href="${services_path}templates/services/embedded-analytics-service-beta.html">Embedded Analytics Service</a>
+                        <a class="dropdown-item" title="action" href="${services_path}templates/services/patient-monitoring-service-coming-soon.html">Patient Monitoring Service</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" title="action" href="#">Something else here</a>
+                        <a class="dropdown-item" title="action" href="${services_path}templates/services/ride-sharing-service-coming-soon.html">Ride Sharing Service</a>
                     </div>
                 </li>
                 <li class="nav-item">
