@@ -28,21 +28,21 @@
     		<div class="row w-100">
     			<div class="col-lg-4 col-sm-6 offset-lg-2 mt-5 pt-5">
     				<h1 class="font-weight-bold mb-5">Contact Us</h1>
-    				<form>
+    				<form id="contactForm">
               <div class="form-group">
                 <label for="exampleInputPassword1">Name <span class="text-danger"> *</span></label>
-                <input type="text" class="form-control" placeholder="Your Name" id="exampleInputPassword1">
+                <input type="text" required class="form-control" placeholder="Your Name" id="name">
               </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Email address <span class="text-danger"> *</span></label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Email Address" aria-describedby="emailHelp">
+                <input type="email"  required class="form-control" id="email" placeholder="Your Email Address" aria-describedby="emailHelp">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
               </div>
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Message <span class="text-danger"> *</span></label>
-                <textarea class="form-control" placeholder="Enter Your Message" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" required placeholder="Enter Your Message" id="message" rows="3"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="button" onclick="sendEmail()" class="btn btn-primary">Submit</button>
             </form>
     			</div>
     			<div class="col-lg-4 col-sm-6 offset-lg-1 mt-5 pt-5">
@@ -76,5 +76,6 @@
     <script type="text/javascript" src="../js/header.js"></script>
     <script type="text/javascript" src="../js/footer.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/form.js"></script>
   </body>
 </html>
